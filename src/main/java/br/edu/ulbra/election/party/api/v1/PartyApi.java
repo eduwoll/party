@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -30,7 +29,7 @@ public class PartyApi {
 
     @GetMapping("/{partyId}")
     @ApiOperation(value = "Get party by Id")
-    public PartyOutput getById(@PathVariable(name="partyId") Long partyId){
+    public PartyOutput getById(@PathVariable Long partyId){
         return partyService.getById(partyId);
     }
 
